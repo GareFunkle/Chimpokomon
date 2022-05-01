@@ -1,3 +1,3 @@
 display_x = 800
 display_y = 600
-game_name = "Chimpokomons"
+game_name = "Chimpokomon"
