@@ -25,7 +25,7 @@ class Game:
         self.player = Player(player_position.x, player_position.y)
 
         # dessiner le groupe de calque
-        self.group = pyscroll.PyscrollGroup(map_layer=map_layer, default_layer=3)
+        self.group = pyscroll.PyscrollGroup(map_layer=map_layer, default_layer=5)
         self.group.add(self.player)
 
     def move(self):
@@ -33,12 +33,18 @@ class Game:
 
         if pressed[pygame.K_UP]:
             self.player.move_up()
+            self.player.change_animation("up")
         if pressed[pygame.K_RIGHT]:
             self.player.move_right()
+            self.player.change_animation("right")
         if pressed[pygame.K_DOWN]:
             self.player.move_down()
+            self.player.change_animation("down")
         if pressed[pygame.K_LEFT]:
             self.player.move_left()
+            self.player.change_animation("left")
+
+
     def run(self):
 
         clock = pygame.time.Clock()
