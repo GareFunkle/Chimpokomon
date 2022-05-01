@@ -23,6 +23,9 @@ class Player(pygame.sprite.Sprite):
 
     def move_down(self):
         self.position[1] += self.speed_walk
+
+    def terrencehelpme(self):
+        pass
     
 
 
