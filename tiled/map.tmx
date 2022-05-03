@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="18">
  <tileset firstgid="1" source="nature.tsx"/>
- <tileset firstgid="721" source="house.tsx"/>
+ <objectgroup id="5" name="Objects">
+  <object id="1" name="player" x="132.907" y="315.666">
+   <point/>
+  </object>
+  <object id="2" type="collision" x="0" y="0.333333" width="801" height="31"/>
+  <object id="3" type="collision" x="768" y="31.3333" width="32.3333" height="769"/>
+  <object id="4" type="collision" x="0" y="769" width="768" height="30"/>
+  <object id="5" type="collision" x="-0.333333" y="31.3333" width="32.6667" height="737.667"/>
+  <object id="6" type="collision" x="447.75" y="736.75" width="64" height="31.75"/>
+  <object id="7" type="collision" x="448.25" y="368.75" width="63.25" height="302.75"/>
+  <object id="8" type="collision" x="320.5" y="368.75" width="127.25" height="47.25"/>
+  <object id="9" type="collision" x="320.25" y="258" width="63.5" height="110.5"/>
+  <object id="10" type="collision" x="320.25" y="31.75" width="63.75" height="158.5"/>
+  <object id="11" type="collision" x="32.25" y="560.25" width="61.75" height="48.25"/>
+  <object id="14" type="collision" x="162" y="560.545" width="286.364" height="47.6364"/>
+ </objectgroup>
  <layer id="1" name="background" width="50" height="50">
   <data encoding="csv">
 333,334,333,334,333,334,333,334,333,334,333,334,333,334,333,334,333,334,333,334,333,334,333,334,333,334,333,334,333,334,333,334,333,334,333,334,333,334,333,334,333,334,333,334,333,334,333,334,333,334,
@@ -218,6 +233,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,528,528,528,528,528,528,528,528,528,528,528,528,528,528,528,528,528,528,528,528,528,528,528,528,528,528,528,528,528,528,528,528,0,0,0,0,0
 </data>
  </layer>
+<<<<<<< HEAD
  <objectgroup id="5" name="Objects">
   <object id="1" name="player" x="424.667" y="318.667">
    <point/>
@@ -236,4 +252,6 @@
   <object id="16" type="collision" x="320.25" y="191.5" width="31.875" height="16.375"/>
   <object id="17" type="collision" x="351.875" y="240" width="30.5" height="17.875"/>
  </objectgroup>
+=======
+>>>>>>> cade5714d09aa7902cefe644df1d57fd44ed235f
 </map>
