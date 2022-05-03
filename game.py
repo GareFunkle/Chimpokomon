@@ -52,7 +52,7 @@ class Game:
             self.move()
             self.map_manager.draw()
             self.map_manager.check_collision()
-            self.player.save_location()
+            # self.player.save_location()
             
             pygame.display.flip()
             
