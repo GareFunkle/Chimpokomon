@@ -7,7 +7,7 @@ class Player(pygame.sprite.Sprite):
         super().__init__()
         self.sprite_sheet = pygame.image.load('sprite/player.png')
         self.image = self.get_image(0, 0)
-        self.image.set_colorkey([0, 0, 0])
+        self.image.set_colorkey([255, 255, 255])
         self.rect = self.image.get_rect()
         self.position = [x, y]
         self.images = {
@@ -18,10 +18,15 @@ class Player(pygame.sprite.Sprite):
         }
         self.feet = pygame.Rect(0, 0, self.rect.width * 0.5, 12)
         self.old_position = self.position.copy()
-        self.speed_walk = 3
+        self.speed_walk = 2
 
     def save_location(self):
         self.old_position = self.position.copy()
+        
+    def move_back(self):
+        self.position = self.old_position
+        self.rect.topleft = self.position
+        self.feet.midbottom = self.rect.midbottom
 
     def change_animation(self, name):
         self.image = self.images[name]
@@ -45,10 +50,7 @@ class Player(pygame.sprite.Sprite):
         self.rect.topleft = self.position
         self.feet.midbottom = self.rect.midbottom
 
-    def move_back(self):
-        self.position = self.old_position
-        self.rect.topleft = self.position
-        self.feet.midbottom = self.rect.midbottom
+
 
 
     def get_image(self, x, y):
