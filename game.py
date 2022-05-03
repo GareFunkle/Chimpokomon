@@ -48,11 +48,12 @@ class Game:
 
         while running:
 
-            self.player.save_location()
             self.update()
             self.move()
             self.map_manager.draw()
             self.map_manager.check_collision()
+            self.player.save_location()
+            
             pygame.display.flip()
             
             for event in pygame.event.get():

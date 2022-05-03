@@ -30,9 +30,10 @@ class MapManager:
         for sprite in self.get_group().sprites():
             if sprite.feet.collidelist(self.get_walls()) > -1:
                 print(True)
-                sprite.move_back()
+
             else:
                 print(False)
+                sprite.move_back()
 
     def draw_collision(self):
         for collision in self.get_walls():
